@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="E:/springlib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/hibernate-core-5.0.11.Final.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/hibernate-entitymanager-5.0.11.Final.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/jstl.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/jta.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/mysql-connector-java-3.1.10-bin.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-aop-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-beans-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-context-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-core-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-data-commons-1.7.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-data-jpa-1.5.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-expression-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-jdbc-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-orm-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-security-config-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-security-core-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-security-web-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-tx-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-web-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/spring-webmvc-4.3.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/springlib/standard.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

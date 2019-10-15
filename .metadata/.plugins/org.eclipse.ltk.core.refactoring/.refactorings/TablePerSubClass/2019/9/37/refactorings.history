@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.hexa.client&apos; to &apos;TablePerClass/src&apos;&#x0D;&#x0A;- Original project: &apos;TablePerSubClass&apos;&#x0D;&#x0A;- Destination element: &apos;TablePerClass/src&apos;&#x0D;&#x0A;- Original element: &apos;TablePerSubClass/src/com.hexa.client&apos;" description="Copy package" destination="=TablePerClass/src" element1="/src&lt;com.hexa.client" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1568404929700" version="1.0"/>
+</session>

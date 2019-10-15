@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Department.java&apos; to &apos;EmpMgmtHib/src/com.hexa.entity&apos;&#x0D;&#x0A;- Original project: &apos;Hibernate&apos;&#x0D;&#x0A;- Destination element: &apos;EmpMgmtHib/src/com.hexa.entity&apos;&#x0D;&#x0A;- Original element: &apos;com.hexa.entity.Department.java&apos;" description="Copy compilation unit" destination="=EmpMgmtHib/src&lt;com.hexa.entity" element1="/src&lt;com.hexa.entity{Department.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1568669046028" units="1" version="1.0"/>
+</session>

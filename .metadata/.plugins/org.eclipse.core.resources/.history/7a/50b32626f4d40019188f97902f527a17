@@ -1,0 +1,40 @@
+package com.hexa.client;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.hexa.dao.EmpDaoImpl;
+import com.hexa.dao.IEmpDao;
+import com.hexa.entity.Emp;
+import com.hexa.util.HibernateUtil;
+
+public class UpdateEmployee {
+	 SessionFactory sfac = HibernateUtil.getSessionFactory();
+	public static void main(String[] args) {
+	   
+	    IEmpDao dao = new EmpDaoImpl();
+		Emp emp = dao.updateEmployee(1001, 60000);
+		if(emp != null)
+			System.out.println(emp);
+		else {
+			System.out.println("Data not found");
+		}
+	}
+	
+	public String updateEmployee(int eid, double sal) {
+		Session sess = sfac.openSession();
+		Transaction tx = sess.beginTransaction();
+		try {
+			Emp emp = sess.get(Emp.class, eid);
+			emp.setEmpSal(sal);
+			tx.commit();
+		} catch (HibernateException e) {
+			tx.rollback();
+			return "Not updated";
+		}
+		return "Employee updated";
+	}
+
+}

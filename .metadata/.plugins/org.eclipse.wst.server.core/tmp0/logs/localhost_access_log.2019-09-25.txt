@@ -1,0 +1,17 @@
+127.0.0.1 - - [25/Sep/2019:16:11:06 -0700] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:11:29 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 1395
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:15:09 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 500 9766
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:15:58 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 1397
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:16:29 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 500 3581
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:17:01 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 500 3652
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:17:30 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 1422
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:18:10 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 1722
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:18:29 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 1792
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:19:26 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 1824
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:24:24 -0700] "GET /EmpMgmtHib/ HTTP/1.1" 200 841
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:24:24 -0700] "GET /EmpMgmtHib/elist.css HTTP/1.1" 200 250
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:24:24 -0700] "GET /EmpMgmtHib/ajax.js HTTP/1.1" 404 1096
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:24:24 -0700] "GET /EmpMgmtHib/hexa.css HTTP/1.1" 200 1040
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:25:19 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 2049
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:16:27:17 -0700] "GET /EmpMgmtHib/Seats.jsp HTTP/1.1" 200 2025
+172.25.229.141 - - [25/Sep/2019:16:57:56 -0700] "GET /hexamovies/ HTTP/1.1" 404 1089

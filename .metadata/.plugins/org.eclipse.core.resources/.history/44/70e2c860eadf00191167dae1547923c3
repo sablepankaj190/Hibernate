@@ -1,0 +1,24 @@
+<%@include file="Meta.jsp"%>
+<html>
+<head>
+  <style>
+    .seats .btn{
+      margin:10px;
+    }
+  </style>
+</head>
+
+<body>
+<%
+  String[] arr = {"A", "B", "C", "D", "E"};
+  pageContext.setAttribute("rownos", arr);
+%>
+<c:forEach begin="1" end="5" var="i">
+<div>
+   <c:forEach begin="1" end="5" var="j">
+      <input type="button" value="${pageScope.rownos[i] j}"/>
+   </c:forEach>
+   </div>
+</c:forEach>
+</body>
+</html>

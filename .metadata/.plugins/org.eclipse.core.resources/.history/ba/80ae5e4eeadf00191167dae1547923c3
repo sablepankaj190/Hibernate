@@ -1,0 +1,20 @@
+<%@include file="Meta.jsp"%>
+<html>
+<head>
+  <style>
+    .seats .btn{
+      margin:10px;
+    }
+  </style>
+</head>
+
+<body>
+<c:forEach begin="1" end="5">
+<div>
+   <c:forEach begin="1" end="5" var="j">
+      <input type="button" value="${j}"/>
+   </c:forEach>
+   </div>
+</c:forEach>
+</body>
+</html>

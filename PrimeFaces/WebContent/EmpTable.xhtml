@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+<f:view>
+	<h1 align="center">Employee Details</h1>
+	<hr size="2" />
+	<div style="width:50%;margin:0 auto">
+	<h:form id="form">
+
+		<p:dataTable value="#{ebean.elist}" var="e" id="tbl1" paginator="true"
+			rows="3">
+			<p:column sortBy="#{e.empId}">
+				<f:facet name="header">
+					<h:outputText value="Emp Id" />
+				</f:facet>
+				<h:outputText value="#{e.empId}" />
+			</p:column>
+			<p:column sortBy="#{e.empName}" filterBy="empName">
+				<f:facet name="header">
+					<h:outputText value="Emp Name" />
+				</f:facet>
+				<h:outputText value="#{e.empName}" id="lnk" />
+				<p:tooltip for="lnk">
+					<h:panelGrid columns="2">
+						<h:outputText value="emp id" />
+						<h:outputText value="#{e.empId }" />
+						<h:outputText value="emp name" />
+						<h:outputText value="#{e.empName }" />
+						<h:outputText value="emp sal" />
+						<h:outputText value="#{e.empSal }" />
+					</h:panelGrid>
+				</p:tooltip>
+
+			</p:column>
+			<p:column sortBy="#{e.empSal}" filterBy="empSal">
+				<f:facet name="header">
+					<h:outputText value="Emp Sal" />
+				</f:facet>
+				<h:outputText value="#{e.empSal}" />
+			</p:column>
+
+		</p:dataTable>
+	</h:form>
+	</div>
+</f:view>
+</html>
+
+
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+	<h:head>
+		<style>
+.css1 {
+	background-color: orange;
+}
+
+.css2 {
+	background-color: wheat;
+}
+</style>
+		<script>
+			function closeDialog() {
+				var msg1 = document.getElementById("form:ename").innerHTML;
+				var msg2 = document.getElementById("form:eincome").innerHTML;
+				alert(msg1.length + " " + msg2.length);
+				if (msg1.length > 0 || msg2.length > 0)
+					PF('dlg').show();
+				else
+					PF('dlg').hide();
+			}
+			
+		</script>
+	</h:head>
+	<h:body>
+		<h1 align="center">Dialog Demo</h1>
+		<hr size="2" />
+		<div align="center">
+
+			<p:commandButton id="showDialogButton" type="button"
+				value="Calculate Tax" onclick="PF('dlg').show()" />
+			<br />
+			<p:panelGrid id="p1" columns="2" columnClasses="css1,css2">
+				<h:outputText value="Tax to be paid" />
+				<h:outputText id="result" value="#{tbean.tax}" />
+			</p:panelGrid>
+		</div>
+		<p:dialog header="Enter FirstName" widgetVar="dlg" resizable="false">
+			<h:form id="form">
+
+				<h:panelGrid columns="3" style="margin-bottom:10px">
+					<h:outputText value="Employee Name" />
+					<h:inputText id="name" value="#{tbean.ename}" required="true"
+						requiredMessage="name is manadatory"
+						validatorMessage="only alphabets allowed and it must have 3-10 chars">
+						<f:validateLength minimum="3" maximum="10" />
+						<f:validateRegex pattern="[a-zA-Z]+" />
+					</h:inputText>
+					<p:message id="ename" for="name"></p:message>
+
+					<h:outputText value="Annual income" />
+					<h:inputText id="aincome" value="#{tbean.income}" required="true"
+						requiredMessage="income is manadatory"
+						converterMessage="must be a number" />
+					<p:message id="eincome" for="aincome"></p:message>
+				</h:panelGrid>
+
+				<p:commandButton id="submitButton" value="Submit"
+					actionListener="#{tbean.calcTax}" update=":result @form"
+					 oncomplete="closeDialog()" />
+
+			</h:form>
+		</p:dialog>
+
+
+
+
+		<hr />
+	</h:body>
+</f:view>
+
+</html>
+
+
+

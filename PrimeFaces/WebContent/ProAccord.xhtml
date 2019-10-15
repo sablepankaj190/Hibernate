@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+
+	</h:head>
+<f:view>
+<h1 align="center">Product Accordian</h1>
+<hr />
+<h:form id="form">
+   <div style="width:50%; margin: 0 auto">
+   <p:accordionPanel multiple="false" style="width:300px;">
+      <p:tab title="Brands">
+		 <p:dataList value= "#{pbean.brands}" var="brand" >
+			  <h:outputText value="#{brand}"/>
+	      </p:dataList> 
+	 </p:tab>
+	
+	 <p:tab title="Colors">
+		 <p:dataList value= "#{pbean.colors}" var="clr" >
+			     <h:outputText value="#{clr}"/>
+		 </p:dataList> 
+	 </p:tab>
+	
+	<p:tab title="Sizes">
+		 <p:dataList value= "#{pbean.sizes}" var="size" >
+			 <h:outputText value="#{size}"/>
+		 </p:dataList> 
+	</p:tab>
+	
+</p:accordionPanel>
+</div>
+<hr size="2"/>
+
+<div style="width:50%; margin: 0 auto">
+   <p:tabView  style="width:300px;">
+      <p:tab title="Brands">
+		 <p:dataList value= "#{pbean.brands}" var="brand" >
+			  <h:outputText value="#{brand}"/>
+	      </p:dataList> 
+	 </p:tab>
+	
+	 <p:tab title="Colors">
+		 <p:dataList value= "#{pbean.colors}" var="clr" >
+			     <h:outputText value="#{clr}"/>
+		 </p:dataList> 
+	 </p:tab>
+	
+	<p:tab title="Sizes">
+		 <p:dataList value= "#{pbean.sizes}" var="size" >
+			 <h:outputText value="#{size}"/>
+		 </p:dataList> 
+	</p:tab>
+	
+</p:tabView>
+</div>
+</h:form>
+</f:view>
+</html>

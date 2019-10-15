@@ -1,0 +1,74 @@
+package com.hexa.client;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.hexa.dao.EmpDaoImpl;
+import com.hexa.dao.IEmpDao;
+import com.hexa.entity.Emp;
+import com.hexa.util.HibernateUtil;
+
+public class GetEmployee implements IEmpDao{
+    SessionFactory sfac = HibernateUtil.getSessionFactory();
+	public static void main(String[] args) {
+		IEmpDao dao = new EmpDaoImpl();
+		Emp emp = dao.getEmployee(1001);
+		if(emp != null)
+			System.out.println(emp);
+		else {
+			System.out.println("Data not found");
+		}
+		
+	}
+	@Override
+	public String addEmployee(Emp emp) {
+		Session sess = sfac.openSession();
+		Transaction tx = sess.beginTransaction();
+		try {
+			sess.save(emp);
+			tx.commit();
+		} catch (HibernateException ex) {
+		
+			tx.rollback();
+			return "Not Added";
+		}
+		return "Employee Added";
+	}
+
+	@Override
+	public Emp getEmployee(int eid) {
+		Session sess = sfac.openSession();
+		Transaction tx = sess.beginTransaction();
+		
+		return null;
+	}
+
+	@Override
+	public String updateEmployee(int eid, double sal) {
+		Session sess = sfac.openSession();
+		Transaction tx = sess.beginTransaction();
+		try {
+			Emp emp = sess.get(Emp.class, eid);
+			emp.setEmpSal(sal);
+			tx.commit();
+		} catch (HibernateException e) {
+			tx.rollback();
+			return "Not updated";
+		}
+		return "Employee updated";
+	}
+
+	@Override
+	public String deleteEmployee(int eid) {
+		Session sess = sfac.openSession();
+		Transaction tx = sess.beginTransaction();
+		try {
+			
+		} catch (HibernateException e) {
+			
+		}
+		return "Employee deleted";
+	}
+}

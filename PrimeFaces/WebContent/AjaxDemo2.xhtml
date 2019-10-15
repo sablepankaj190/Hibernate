@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<html>
+<h:head>
+   <style>
+   table{
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      .css1{
+         background-color: orange;
+      }
+      .css2{
+         background-color: wheat;
+      }
+      .ui-panelgrid .ui-panelgrid-footer{
+         text-align:center;
+         
+      }
+      </style>
+</h:head>
+<body>
+<h1 align="center">Ajax Demo</h1>
+   <hr size="2"/>
+	<h:form id="frm1">
+	   <p:panelGrid columns="3" padding="10" columnClasses="css1,css2,css2">
+		<h:outputText value="Enter Name" />
+		<h:inputText value="#{vbean.vname }" id="name" 
+			required="true" requiredMessage="User name is mandatory"/>
+		<p:message id="msg1" for="name" />
+		
+
+		<h:outputText value="Enter Age" />
+		<h:inputText value="#{vbean.age }" id="vage" 
+			required="true" requiredMessage="Age is mandatory"/>
+		<p:message for="vage" id="msg2"/>
+		
+		<h:outputText value="Date Of birth" />
+		<p:calendar value="#{vbean.dt }" id="vdob" 
+			required="true" requiredMessage="Date Of Birth is mandatory"/>
+		<p:message for="vdob" id="msg3" />
+		
+		<f:facet name="footer">
+        <p:commandButton value="check age" actionListener="#{vbean.checkAge}" 
+					 update="txt2 @form" />
+		</f:facet>
+		</p:panelGrid>
+		
+		 <p:panelGrid columns="2" padding="10" columnClasses="css1,css2">
+        <h:outputText value="Result" />
+		<h:outputText id="txt2" value="#{vbean.res}"/>
+		</p:panelGrid>
+		
+	</h:form>
+</body>
+	</html>
+
+</f:view>
+
+</html>

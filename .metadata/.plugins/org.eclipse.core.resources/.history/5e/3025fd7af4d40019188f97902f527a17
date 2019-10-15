@@ -1,0 +1,10 @@
+package com.hexa.client;
+
+public class DeleteEmployee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
